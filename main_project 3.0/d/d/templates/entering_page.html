@@ -2,21 +2,48 @@
 <html>
 <head>
     <title>Inventory Management</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            text-align: center;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    
     <div class="content">
         {% block content %}
         <h1>WELCOME TO INVENTORY MANAGEMENT WEBSITE FOR TUCK SHOP</h1>
-        <!---->
-
-        <a href="view"><button>View Product</button></a> 
-        <a href="login"><button>Admin Login</button></a>    
-    {% endblock %}
+        <a href="view"><button>View Product</button></a>
+        <a href="login"><button>Admin Login</button></a>
+        {% endblock %}
     </div>
 </body>
 </html>
-
-
-
