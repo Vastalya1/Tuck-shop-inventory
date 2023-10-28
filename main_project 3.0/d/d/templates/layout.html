@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('add_item') }}">Add Item</a></li>
+            <!--<li><a href="{{ url_for('buy_item') }}">Buy</a></li> -->
+            <li><a href="{{ url_for('edit_item') }}">Edit Item</a></li>
+            <li><a href="{{ url_for('delete_item') }}">Delete Item</a></li>
+            <li style="text-align: right;"><a href="{{ url_for('entering_page') }}">Logout</a></li>
+            
+        </ul>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

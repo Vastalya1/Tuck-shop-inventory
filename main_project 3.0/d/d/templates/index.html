@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management</title>
+</head>
+<body>
+    <h1>Inventory</h1>
+    <ul>
+        {% for item in inventory %}
+            <li>{{ item.name }} - {{ item.quantity }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Add Item</h2>
+    <form method="POST" action="/add_item">
+        <label for="item_name">Item Name:</label>
+        <input type="text" id="item_name" name="item_name" required>
+        <label for="item_quantity">Quantity:</label>
+        <input type="number" id="item_quantity" name="item_quantity" required>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

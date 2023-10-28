@@ -1,0 +1,4 @@
+Receipt
+Date: 2023-10-22 18:11:13
+Item Name: ew
+Quantity Bought: 3

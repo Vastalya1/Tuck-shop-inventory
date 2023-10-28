@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="{{ url_for('view') }}">Home</a></li>
+            <li><a href="{{ url_for('buy_item') }}">Buy</a></li>
+            <li><a href="/">Back</a></li>
+            
+            
+        </ul>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Receipt
+Date: 2023-10-25
+Item Name: wada pav
+Quantity Bought: 2

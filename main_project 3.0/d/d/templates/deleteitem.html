@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Delete Item</h1>
+    <form method="POST">
+        <label for="selected_item">Select Item to Delete</label>
+        <select id="selected_item" name="selected_item">
+            {% for item in items %}
+                <option value="{{ item }}">{{ item }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <input type="submit" value="Delete">
+    </form>
+{% endblock %}

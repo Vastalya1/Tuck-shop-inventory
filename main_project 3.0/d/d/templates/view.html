@@ -1,0 +1,33 @@
+{% extends "usernavbar.html" %}
+
+{% block content %}
+    <h1>Inventory</h1>
+    
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        {% for item in inventory %}
+            <tr>
+                <td>{{ item['item'] }}</td>
+                <td>{{ item['quantity'] }}</td>
+                <td>{{ item['price'] }}</td>
+                <td>
+                    <form action="{{ url_for('view_cart') }}" method="POST">
+                        <input type="hidden" name="item_name" value="{{ item['item'] }}">
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="hidden" name="price" value="{{ item['price'] }}">
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    
+    <form action="{{ url_for('view_cart') }}" method="GET">
+        <button type="submit">View Cart</button>
+    </form>
+{% endblock %}

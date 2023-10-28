@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Add Item</h1>
+    <form method="post">
+        <label for="item_name">Item Name:</label>
+        <input type="text" name="item_name" required><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" required><br>
+
+        <label for="price">Price:</label>
+        <input type="number" name="price" required><br>
+
+        <input type="submit" value="Add">
+    </form>
+{% endblock %}

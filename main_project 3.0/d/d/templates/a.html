@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Edit Item</h1>
+    <form method="POST" action="/edit_item" id="editForm">
+        <label for="item_name">Item Name:</label>
+        <input type="text" id="item_name" name="item_name" required><br><br>
+
+        <input type="submit" value="Edit">
+    </form>
+
+    <script>
+        document.getElementById('editForm').addEventListener('submit', function(event) {
+            // Prevent the form from submitting immediately
+            event.preventDefault();
+            
+            // Get the item name entered in the form
+            var item_name = document.getElementById('item_name').value;
+
+            // Update the form's action attribute with the dynamically constructed URL
+            this.action = '/edit_item/' + item_name;
+
+            // Submit the form
+            this.submit();
+        });
+    </script>
+{% endblock %}

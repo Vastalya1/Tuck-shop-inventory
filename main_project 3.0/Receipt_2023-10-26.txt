@@ -1,0 +1,4 @@
+Receipt
+Date: 2023-10-26
+Item Name: veg patties
+Quantity Bought: 3

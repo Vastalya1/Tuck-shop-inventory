@@ -1,0 +1,4 @@
+Receipt
+Date: 2023-10-28
+Item Name: chocobar
+Quantity Bought: 2

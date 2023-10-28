@@ -1,0 +1,29 @@
+{% extends "nonavbar.html" %}
+
+{% block content %}
+    <h1>LOGIN</h1>
+    <form method="POST">
+
+        <label for="admin_name">Admin Name:</label>
+        <input type="text" id="admin_name" name="admin_name" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Login">
+        
+    </form>
+    
+    <a href="/"><button style="margin-top: 20px">back</button></a>
+    
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul class="flash-messages">
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+{% endblock %}
