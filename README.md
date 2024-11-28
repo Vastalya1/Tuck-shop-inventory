@@ -1,4 +1,3 @@
-#so we need to make a app for our tuck shop so here are the step if you wanna contribute here
-#1 fork the repository
-#2 make changes in the code make sure its a good one
-#3 pull request karoooooooo
+#a simple yet comprehensive inventory management system for tuck sho.
+includes both user and owner side views.
+allows owner to perform CRUD operations while the user can view the products, add them to cart and generate bill at checkout
